@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		categories | 
+		fafu | 
 	 
 	Hexo
 	</title>
@@ -131,7 +131,7 @@ var _hmt = _hmt || [];
 
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2021/09/23/fafu/">
 										fafu
 									</a>
@@ -173,18 +173,113 @@ var _hmt = _hmt || [];
 	<!-- 引入正文 -->
 	<div id="content">
 		<h1 id="article-title">
-	<i class="fa fa-folder-open" aria-hidden="true"></i>分类
-</h1>
-<h2 id="article-title">
-	目前共计 0 个分类
-</h2>
 
-<div id="article-content">
-	<ul>
-      
-	</ul>
+	fafu
+</h1>
+<div class="article-meta">
+	
+		<span>
+			阅读量:<span id="/2021/09/23/fafu/" class="leancloud_visitors" data-flag-title="fafu"></span>
+		</span>
+	
+	<span>tony-6</span>
+	<span>2021-09-23 19:01:03</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+    
+
+    
+		<span>Tags：</span>
+            
+    
+		</div>
+
 </div>
 
+<div id="article-content">
+	<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="昨晚的夜宵"><a href="#昨晚的夜宵" class="headerlink" title="昨晚的夜宵"></a>昨晚的夜宵</h2><ul>
+<li>啤酒</li>
+</ul>
+<p><code> 掌中宝</code> 就是你输入正文的时候啊前面要跟东西 要么单引号 要么减号 要么数字加个.（应该是要加的）</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">网络蹦迪</span><br></pre></td></tr></table></figure>
+
+
+
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/09/23/%E9%9A%8F%E4%BE%BF/">
+                随便
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+    // 显示次数
+		function showTime(Counter) {
+			var query = new AV.Query("Counter");
+			if($(".leancloud_visitors").length > 0){
+				var url = $(".leancloud_visitors").attr('id').trim();
+				// where field
+				query.equalTo("words", url);
+				// count
+				query.count().then(function (number) {
+					// There are number instances of MyClass where words equals url.
+					$(document.getElementById(url)).text(number?  number : '--');
+				}, function (error) {
+					// error is an instance of AVError.
+				});
+			}
+		}
+		// 追加pv
+		function addCount(Counter) {
+			var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'wujun234.github.io';
+			var Counter = AV.Object.extend("Counter");
+			var query = new Counter;
+			query.save({
+				words: url
+			}).then(function (object) {
+			})
+		}
+		$(function () {
+			var Counter = AV.Object.extend("Counter");
+			addCount(Counter);
+			showTime(Counter);
+		});
+	
+</script>
 	</div>
 	<div id="footer">
 	<p>
