@@ -8,6 +8,8 @@
 	<!-- title -->
 	
 	<title>
+	
+		羞涩内敛的美女子 | 
 	 
 	Hexo
 	</title>
@@ -147,7 +149,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2021/09/23/%E9%9A%8F%E4%BE%BF/">
 										随便
 									</a>
@@ -161,81 +163,117 @@ var _hmt = _hmt || [];
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<div id="index">
+		<h1 id="article-title">
+
+	随便
+</h1>
+<div class="article-meta">
 	
-		<div class="index-li">
-			<a href="/2021/09/23/%E9%9A%8F%E4%BE%BF/">
-				<h2 class="index-title">
-					随便
-				</h2>
-				<div class="index-brief">
-					一级标题二级
-一个减号后面跟字
-
-
-或者用数字
-用数字
-你想写什么 前面要加 - 或者1. 2. 3. 4. 5. +内容说话   写字
-
-加粗斜体如果你想加入代码 就
-1djlifwelfn   代码
-
-
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-09-23</span>
-                    
-                            
-                    
-                </div>
-		</div>	
+		<span>
+			阅读量:<span id="/2021/09/23/%E9%9A%8F%E4%BE%BF/" class="leancloud_visitors" data-flag-title="羞涩内敛的美女子"></span>
+		</span>
 	
-		<div class="index-li">
-			<a href="/2021/09/23/%E4%BB%8A%E5%A4%A9%E5%A5%BD%E5%9B%B0%E5%95%8A/">
-				<h2 class="index-title">
-					今天好困啊
-				</h2>
-				<div class="index-brief">
-					好困啊好困12345#include&lt;iostream&gt;using namespace std;int main()really kun
+	<span>tony-6</span>
+	<span>2021-09-23 18:38:55</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+    
 
+    
+		<span>Tags：</span>
+            
+    
+		</div>
 
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-09-23</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/09/17/hello-world/">
-				<h2 class="index-title">
-					hello-world
-				</h2>
-				<div class="index-brief">
-					Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-09-17</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-	
-	<div id="index-paginator">
-		
-	</div>
 </div>
 
+<div id="article-content">
+	<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级"><a href="#二级" class="headerlink" title="二级"></a>二级</h2><ul>
+<li>一个减号后面跟字</li>
+</ul>
+<ol>
+<li>或者用数字</li>
+<li>用数字</li>
+<li>你想写什么 前面要加 - 或者1. 2. 3. 4. 5. +内容<br><code>说话</code><br><code>   </code><br><code>写字</code></li>
+</ol>
+<p><strong>加粗</strong><br><em>斜体</em><br>如果你想加入代码 就</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">djlifwelfn   代码</span><br></pre></td></tr></table></figure>
+
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/09/23/%E4%BB%8A%E5%A4%A9%E5%A5%BD%E5%9B%B0%E5%95%8A/">
+                今天好困啊
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+    // 显示次数
+		function showTime(Counter) {
+			var query = new AV.Query("Counter");
+			if($(".leancloud_visitors").length > 0){
+				var url = $(".leancloud_visitors").attr('id').trim();
+				// where field
+				query.equalTo("words", url);
+				// count
+				query.count().then(function (number) {
+					// There are number instances of MyClass where words equals url.
+					$(document.getElementById(url)).text(number?  number : '--');
+				}, function (error) {
+					// error is an instance of AVError.
+				});
+			}
+		}
+		// 追加pv
+		function addCount(Counter) {
+			var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'wujun234.github.io';
+			var Counter = AV.Object.extend("Counter");
+			var query = new Counter;
+			query.save({
+				words: url
+			}).then(function (object) {
+			})
+		}
+		$(function () {
+			var Counter = AV.Object.extend("Counter");
+			addCount(Counter);
+			showTime(Counter);
+		});
+	
+</script>
 	</div>
 	<div id="footer">
 	<p>
