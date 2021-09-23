@@ -8,6 +8,8 @@
 	<!-- title -->
 	
 	<title>
+	
+		今天好困啊 | 
 	 
 	Hexo
 	</title>
@@ -138,7 +140,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2021/09/23/%E4%BB%8A%E5%A4%A9%E5%A5%BD%E5%9B%B0%E5%95%8A/">
 										今天好困啊
 									</a>
@@ -152,52 +154,108 @@ var _hmt = _hmt || [];
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<div id="index">
-	
-		<div class="index-li">
-			<a href="/2021/09/23/%E4%BB%8A%E5%A4%A9%E5%A5%BD%E5%9B%B0%E5%95%8A/">
-				<h2 class="index-title">
-					今天好困啊
-				</h2>
-				<div class="index-brief">
-					好困啊好困1really kun
+		<h1 id="article-title">
 
+	今天好困啊
+</h1>
+<div class="article-meta">
+	
+		<span>
+			阅读量:<span id="/2021/09/23/%E4%BB%8A%E5%A4%A9%E5%A5%BD%E5%9B%B0%E5%95%8A/" class="leancloud_visitors" data-flag-title="今天好困啊"></span>
+		</span>
+	
+	<span>tony-6</span>
+	<span>2021-09-23 11:18:51</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+    
 
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-09-23</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/09/17/hello-world/">
-				<h2 class="index-title">
-					hello-world
-				</h2>
-				<div class="index-brief">
-					Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-09-17</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-	
-	<div id="index-paginator">
-		
-	</div>
+    
+		<span>Tags：</span>
+            
+    
+		</div>
+
 </div>
 
+<div id="article-content">
+	<h1 id="好困啊"><a href="#好困啊" class="headerlink" title="好困啊"></a>好困啊</h1><h2 id="好困"><a href="#好困" class="headerlink" title="好困"></a>好困</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">really kun</span><br></pre></td></tr></table></figure>
+
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/09/17/hello-world/">
+                hello-world
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+    // 显示次数
+		function showTime(Counter) {
+			var query = new AV.Query("Counter");
+			if($(".leancloud_visitors").length > 0){
+				var url = $(".leancloud_visitors").attr('id').trim();
+				// where field
+				query.equalTo("words", url);
+				// count
+				query.count().then(function (number) {
+					// There are number instances of MyClass where words equals url.
+					$(document.getElementById(url)).text(number?  number : '--');
+				}, function (error) {
+					// error is an instance of AVError.
+				});
+			}
+		}
+		// 追加pv
+		function addCount(Counter) {
+			var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'wujun234.github.io';
+			var Counter = AV.Object.extend("Counter");
+			var query = new Counter;
+			query.save({
+				words: url
+			}).then(function (object) {
+			})
+		}
+		$(function () {
+			var Counter = AV.Object.extend("Counter");
+			addCount(Counter);
+			showTime(Counter);
+		});
+	
+</script>
 	</div>
 	<div id="footer">
 	<p>
