@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		categories | 
+		html | 
 	 
 	Hexo
 	</title>
@@ -140,7 +140,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2021/09/26/html/">
 										html
 									</a>
@@ -155,18 +155,126 @@ var _hmt = _hmt || [];
 	<!-- 引入正文 -->
 	<div id="content">
 		<h1 id="article-title">
-	<i class="fa fa-folder-open" aria-hidden="true"></i>分类
-</h1>
-<h2 id="article-title">
-	目前共计 0 个分类
-</h2>
 
-<div id="article-content">
-	<ul>
-      
-	</ul>
+	html
+</h1>
+<div class="article-meta">
+	
+		<span>
+			阅读量:<span id="/2021/09/26/html/" class="leancloud_visitors" data-flag-title="html"></span>
+		</span>
+	
+	<span>tony-6</span>
+	<span>2021-09-26 22:12:15</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+    
+
+    
+		<span>Tags：</span>
+            
+    
+		</div>
+
 </div>
 
+<div id="article-content">
+	<h1 id="html"><a href="#html" class="headerlink" title="html"></a>html</h1><h2 id="结构与语法"><a href="#结构与语法" class="headerlink" title="结构与语法"></a>结构与语法</h2><ul>
+<li><p>&lt; html &gt;</p>
+</li>
+<li><p>&lt; head &gt;</p>
+</li>
+<li><p>&lt; title &gt;这里是标题&lt; /title &gt;</p>
+</li>
+</ul>
+<p>&lt; /head &gt; //头部 闭合</p>
+<ul>
+<li><p>&lt; body &gt; </p>
+</li>
+<li><p>&lt; h1 &gt; 反正这里是写字的 &lt; /h1 &gt;</p>
+</li>
+<li><p>&lt; p &gt;hello world &lt; /p &gt;</p>
+</li>
+<li><p>&lt; img src=”图片链接” width=”500” height=”100” / &gt;</p>
+</li>
+</ul>
+<p>&lt; /body &gt;</p>
+<p>&lt; /html &gt;<br>&lt; !– 俩头要闭合,没错这里是注释 –&gt;</p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/09/17/hello-world/">
+                hello-world
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+    // 显示次数
+		function showTime(Counter) {
+			var query = new AV.Query("Counter");
+			if($(".leancloud_visitors").length > 0){
+				var url = $(".leancloud_visitors").attr('id').trim();
+				// where field
+				query.equalTo("words", url);
+				// count
+				query.count().then(function (number) {
+					// There are number instances of MyClass where words equals url.
+					$(document.getElementById(url)).text(number?  number : '--');
+				}, function (error) {
+					// error is an instance of AVError.
+				});
+			}
+		}
+		// 追加pv
+		function addCount(Counter) {
+			var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'wujun234.github.io';
+			var Counter = AV.Object.extend("Counter");
+			var query = new Counter;
+			query.save({
+				words: url
+			}).then(function (object) {
+			})
+		}
+		$(function () {
+			var Counter = AV.Object.extend("Counter");
+			addCount(Counter);
+			showTime(Counter);
+		});
+	
+</script>
 	</div>
 	<div id="footer">
 	<p>
