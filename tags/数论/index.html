@@ -8,8 +8,6 @@
 	<!-- title -->
 	
 	<title>
-	
-		解题报告 | 
 	 
 	Hexo
 	</title>
@@ -149,7 +147,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file active">
+								<li class="file">
 									<a href="/2021/09/26/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/">
 										解题报告
 									</a>
@@ -163,138 +161,36 @@ var _hmt = _hmt || [];
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<h1 id="article-title">
-
-	解题报告
-</h1>
-<div class="article-meta">
+		<div id="index">
 	
-		<span>
-			阅读量:<span id="/2021/09/26/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" class="leancloud_visitors" data-flag-title="解题报告"></span>
-		</span>
+		<div class="index-li">
+			<a href="/2021/09/26/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/">
+				<h2 class="index-title">
+					解题报告
+				</h2>
+				<div class="index-brief">
+					triangle
+【问题理解】
+    N个点分布在圆上，每两个点有直达的路径，不存在三条路交于同于点，从非村落的交点出发经过三条路，且不经过村落，再回到这个点，问这种回路有几条
+
+【算法分析】//通过画图，可以发现，正六边形，任意确定俩条最长的对角线，    //那么第三条最长的对角线一定是确定的
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-09-26</span>
+                    
+                            
+                    
+                </div>
+		</div>	
 	
-	<span>tony-6</span>
-	<span>2021-09-26 23:31:10</span>
-		<div id="article-categories">
-    
-		<span>Categories：</span>
-            
-    
-
-    
-		<span>Tags：</span>
-            
-                
-                    <span>
-                        <i class="fa fa-tag" aria-hidden="true">
-                        <a href="/tags/数论/">数论</a>
-                        </i>
-                    </span>
-                
-            
-    
-		</div>
-
+	
+	<div id="index-paginator">
+		
+	</div>
 </div>
 
-<div id="article-content">
-	<h1 id="triangle"><a href="#triangle" class="headerlink" title="triangle"></a>triangle</h1><p><img src="https://i.loli.net/2021/09/27/nlu5jk6ZF1SNEeU.png" alt="triangle.png"></p>
-<p>【问题理解】</p>
-<pre><code>    N个点分布在圆上，每两个点有直达的路径，不存在三条路交于同于点，从非村落的交点出发经过三条路，且不经过村落，再回到这个点，问这种回路有几条
-</code></pre>
-<p>【算法分析】<br>//通过画图，可以发现，正六边形，任意确定俩条最长的对角线，<br>    //那么第三条最长的对角线一定是确定的，而且这三条对角线都是固定</p>
-<pre><code>//试试不连最长的对角线，那么就变成三角形了，不对
-//那么确定了一条最长的对角线后，任意连接俩条非最长的对角线
-//发现是不存在回路的
-//那么确定了俩条最长的对角线后，第三条要么连最长的对角线，或者连
-//非最长的对角线，发现只有前者满足题意，样例就这么推出来了。
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//那么考虑普通的六边形，是同理，那么考虑有7个点的时候，
-//即七边形，存在几个回路，先简单找到一个回路，发现，其中有一个点
-//是没有连边的，再找一条回路，可以发现又有另一个点是没有连边的
-//那么可以得出结论，每六个点就会有回路。 
-
-//但是题目可能不太严谨，能找到一组反例(也可能是我推错了)！！！！！
-//六边形确定俩条最长对角线后，接下来连一条非最长的对角线
-//我可以画一条曲线，使他们强行构成一个回路。 
-//当然有人说题面又给&quot;两两直达的小路&quot;，但是正六边形的情况，
-//就必须有一条最长的对角线要画曲线
-
-//Cnm=n!/( (n-m)! * m! ) ==( n*(n-1)*(n-2)*...*(n-m+1) )
-</code></pre>
-
-</div>
-
-
-    <div class="post-guide">
-        <div class="item left">
-            
-        </div>
-        <div class="item right">
-            
-              <a href="/2021/09/26/html/">
-                html
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-              </a>
-            
-        </div>
-    </div>
-
-
-
-	<div id="vcomments"></div>
-
-
-<script>
-	
-		// 评论
-		new Valine({
-			av: AV,
-			el: '#vcomments',
-			notify: false,
-			verify: false,
-			path: window.location.pathname,
-			appId: '',
-			appKey: '',
-			placeholder: '请输入评论',
-			avatar: 'retro',
-			recordIP: false
-		})
-	
-	
-    // 显示次数
-		function showTime(Counter) {
-			var query = new AV.Query("Counter");
-			if($(".leancloud_visitors").length > 0){
-				var url = $(".leancloud_visitors").attr('id').trim();
-				// where field
-				query.equalTo("words", url);
-				// count
-				query.count().then(function (number) {
-					// There are number instances of MyClass where words equals url.
-					$(document.getElementById(url)).text(number?  number : '--');
-				}, function (error) {
-					// error is an instance of AVError.
-				});
-			}
-		}
-		// 追加pv
-		function addCount(Counter) {
-			var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'wujun234.github.io';
-			var Counter = AV.Object.extend("Counter");
-			var query = new Counter;
-			query.save({
-				words: url
-			}).then(function (object) {
-			})
-		}
-		$(function () {
-			var Counter = AV.Object.extend("Counter");
-			addCount(Counter);
-			showTime(Counter);
-		});
-	
-</script>
 	</div>
 	<div id="footer">
 	<p>
