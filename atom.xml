@@ -6,7 +6,7 @@
   <link href="https://tony-6.github.io/atom.xml" rel="self"/>
   
   <link href="https://tony-6.github.io/"/>
-  <updated>2021-09-26T15:23:49.666Z</updated>
+  <updated>2021-10-20T13:11:06.721Z</updated>
   <id>https://tony-6.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://tony-6.github.io/2021/10/20/php%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://tony-6.github.io/2021/10/20/php%E5%AD%A6%E4%B9%A0/</id>
+    <published>2021-10-20T13:11:06.721Z</published>
+    <updated>2021-10-20T13:11:06.721Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="php学习"><a href="#php学习" class="headerlink" title="php学习"></a>php学习</h1><ul><li><?php// PHP 代码?></li><li><p>echo可以输出多个字符串 无返回值，  print输出一个字符串 返回值为1</p></li><li><p>&lt; br&gt;是换行</p></li><li><p>申明变量：$ 变量名</p></li><li><p>如果要在一个函数中访问一个全局变量，需要使用 global 关键字，在用变量前加个global，或者$GLOBALS[变量] 这样来调用</p></li><li><p>EOF用法和echo区别</p><p><img src="https://i.loli.net/2021/10/20/RjiItQeKDCcyFYH.png"></p></li><li></li><li></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;php学习&quot;&gt;&lt;a href=&quot;#php学习&quot; class=&quot;headerlink&quot; title=&quot;php学习&quot;&gt;&lt;/a&gt;php学习&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;?php
+// PHP 代码
+?&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;echo可以输出多个字符串 无返回值，  </summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>html</title>
