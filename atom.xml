@@ -6,7 +6,7 @@
   <link href="https://tony-6.github.io/atom.xml" rel="self"/>
   
   <link href="https://tony-6.github.io/"/>
-  <updated>2021-10-23T03:36:09.487Z</updated>
+  <updated>2021-10-23T08:55:37.812Z</updated>
   <id>https://tony-6.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://tony-6.github.io/2021/10/20/php%E5%AD%A6%E4%B9%A0/"/>
     <id>https://tony-6.github.io/2021/10/20/php%E5%AD%A6%E4%B9%A0/</id>
     <published>2021-10-20T13:11:06.721Z</published>
-    <updated>2021-10-23T03:36:09.487Z</updated>
+    <updated>2021-10-23T08:55:37.812Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="php学习"><a href="#php学习" class="headerlink" title="php学习"></a>php学习</h1><ul><li><?php// PHP 代码?></li><li><p>echo可以输出多个字符串 无返回值，  print输出一个字符串 返回值为1</p></li><li><p>&lt; br&gt;是换行</p></li><li><p>申明变量：$ 变量名</p></li><li><p>如果要在一个函数中访问一个全局变量，需要使用 global 关键字，在用变量前加个global，或者$GLOBALS[变量] 这样来调用</p></li><li><p>EOF用法和echo区别</p><p><img src="https://i.loli.net/2021/10/20/RjiItQeKDCcyFYH.png"></p></li><li><p>数组</p><p>&lt; ?php </p><p> $cars=array(“Volvo”,”BMW”,”Toyota”); </p><p>var_dump($cars);  //返回数组的数据类型和值</p><p> ?&gt;</p></li><li></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="php学习"><a href="#php学习" class="headerlink" title="php学习"></a>php学习</h1><ul><li><?php// PHP 代码?></li><li><p>echo可以输出多个字符串 无返回值，  print输出一个字符串 返回值为1</p></li><li><p>&lt; br&gt;是换行</p></li><li><p>申明变量：$ 变量名</p></li><li><p>如果要在一个函数中访问一个全局变量，需要使用 global 关键字，在用变量前加个global，或者$GLOBALS[变量] 这样来调用</p></li><li><p>EOF用法和echo区别</p><p><img src="https://i.loli.net/2021/10/20/RjiItQeKDCcyFYH.png"></p></li></ul><ul><li><p>松散比较：使用两个等号 <strong>==</strong> 比较，只比较值，不比较类型。    !=</p><p>严格比较：用三个等号 <strong>===</strong> 比较，除了比较值，也比较类型。  !==</p></li><li><p>常量：</p><p>define(“GREETING”, “欢迎访问 Runoob.com”); echo GREETING;    // 输出 “欢迎访问 Runoob.com”</p><p>define(“GREETING”, “欢迎访问 Runoob.com”, true); echo greeting;  // 输出 “欢迎访问 Runoob.com”，区分大小写- </p></li><li><p>并置运算符</p><p>用.将俩字符串连起来，类似STL里string的+  </p></li><li><p>strlen() 里面跟字符串，返回字符串长度</p></li><li><p>strpos() 函数用于在字符串内查找一个字符或一段指定的文本。</p><p>找到匹配，该函数会返回第一个匹配的字符位置。如果未找到匹配，则返回 FALSE。</p></li><li></li><li><p>数组</p><p>&lt; ?php </p><p> $cars=array(“Volvo”,”BMW”,”Toyota”); </p><p>var_dump($cars);  //返回数组的数据类型和值</p><p> ?&gt;</p><ul><li>count() 里面加数组名称，返回元素的数量</li></ul></li><li><p>关联数组 (类似STL中的map)</p><p><img src="https://i.loli.net/2021/10/23/DuCLrTUVXmloqsN.png" alt="11.PNG"></p><ul><li><p>遍历关联数组 foreach</p><p>foreach($age as $x=&gt;$x_value)<br>{<br>  echo  $x      $x_value;            // key to value<br>  echo “&lt; br&gt;”;<br>}</p></li></ul></li><li><p>sort() 里面跟数组名，升序排序</p><p>rsort() 降序排序</p><p>asort() - 根据关联数组的值，对数组进行升序排列</p><p>ksort() - 根据关联数组的键，对数组进行升序排列</p><p>arsort() - 根据关联数组的值，对数组进行降序排列</p><p>krsort() - 根据关联数组的键，对数组进行降序排列</p></li><li><p>申明一个函数</p><p>function functionName(可跟参数){  ; }</p></li><li><p>魔术常量</p><p>__ LINE__的值为他所在的行数</p><p>__ FILE__ 是一个绝对路径</p><p>__ FUNCTION__返回该函数被定义时的名字</p></li><li></li></ul>]]></content>
     
     
       
