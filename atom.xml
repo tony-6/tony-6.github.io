@@ -6,7 +6,7 @@
   <link href="https://tony-6.github.io/atom.xml" rel="self"/>
   
   <link href="https://tony-6.github.io/"/>
-  <updated>2021-10-26T13:42:33.909Z</updated>
+  <updated>2021-10-26T14:37:04.930Z</updated>
   <id>https://tony-6.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://tony-6.github.io/2021/10/26/%E8%AF%AD%E6%B3%95%E6%B3%A8%E9%87%8A/"/>
     <id>https://tony-6.github.io/2021/10/26/%E8%AF%AD%E6%B3%95%E6%B3%A8%E9%87%8A/</id>
     <published>2021-10-26T13:25:06.000Z</published>
-    <updated>2021-10-26T13:42:33.909Z</updated>
+    <updated>2021-10-26T14:37:04.930Z</updated>
     
-    <content type="html"><![CDATA[<ul><li><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"></li></ul><p>DOCTYPE（Document Type）是指文档类型，是一种标准通用标记语言的文档类型声明，它的目的是要告诉标准通用标记语言解析器，它应该用什么样的文档类型定义（DTD）来解析文档。<br>三种DOCTYPE：过渡型 Transitional ;严格型 Strict ;框架型 Frameset</p><ul><li><html xmlns="     ">xmlns属性是用来定义xml namespace(命名空间),该属性可以放置在文档内任何元素的开始标签中</li><li><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />meta是html的元标签,包含了对应html的相关信息,客户端浏览器或服务端程序都会根据这些信息进行处理 http类型=这个网页是表现内容用的 content(内容类型)=这个网页的格式是文本的 charset(编码)=这个网页的编码是UTF-8,需要注意的是这个是网页内容的编码,而不是文件本身的.</li><li><div style=" margin-top:70px;color:#FFF; font-size:23px; textalign:center">Welcome&nbsp;&nbsp;&nbsp;<font color="#FF0000"> Dhakkan </font>div是网页布局的一种框架，style是用于定义div的样式，也就是div外表的样子。margin-left:到父容器左边框的距离。 margin-right:到父容器右边框的距离。 margin-top: 到父容器上边框的距离。 margin-bottom:到父容器下边框的距离。</li><li><p>error_reporting(0);<br>不显示报错信息</p></li><li><p>if(isset($_GET[‘id’]))<br>isset()函数用来判断变量是否被定义</p></li><li><p>$fp=fopen(‘result.txt’,’a’);<br>就是打开文件reasult.txt</p></li><li><p>fwrite($fp,’ID’.$id.”\n”);<br>fwrite()函数是用于写入文件，若执行成功，返回true，否则返回false</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<ul><li><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"></li></ul><p>DOCTYPE（Document Type）是指文档类型，是一种标准通用标记语言的文档类型声明，它的目的是要告诉标准通用标记语言解析器，它应该用什么样的文档类型定义（DTD）来解析文档。<br>三种DOCTYPE：过渡型 Transitional ;严格型 Strict ;框架型 Frameset</p><ul><li><html xmlns="     ">xmlns属性是用来定义xml namespace(命名空间),该属性可以放置在文档内任何元素的开始标签中</li><li><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />meta是html的元标签,包含了对应html的相关信息,客户端浏览器或服务端程序都会根据这些信息进行处理 http类型=这个网页是表现内容用的 content(内容类型)=这个网页的格式是文本的 charset(编码)=这个网页的编码是UTF-8,需要注意的是这个是网页内容的编码,而不是文件本身的.</li><li><p>&lt; div style=” margin-top:70px;color:#FFF; font-size:23px; textalign:center”&gt;Welcome&nbsp;&nbsp;&nbsp;<font color="#FF0000"> Dhakkan </font><br>div是网页布局的一种框架，style是用于定义div的样式，也就是div外表的样子。<br>margin-left:到父容器左边框的距离。 margin-right:到父容器右边框的距离。 margin-top: 到父容器上边框的距离。 margin-bottom:到父容器下边框的距离。</p></li><li><p>error_reporting(0);<br>不显示报错信息</p></li><li><p>if(isset($_GET[‘id’]))<br>isset()函数用来判断变量是否被定义</p></li><li><p>$fp=fopen(‘result.txt’,’a’);<br>就是打开文件reasult.txt</p></li><li><p>fwrite($fp,’ID’.$id.”\n”);<br>fwrite()函数是用于写入文件，若执行成功，返回true，否则返回false</p></li></ul>]]></content>
     
     
       
