@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		categories | 
+		sql注入sqli-labs | 
 	 
 	Hexo
 	</title>
@@ -168,7 +168,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2021/10/27/sql%E6%B3%A8%E5%85%A5sqli-labs/">
 										sql注入sqli-labs
 									</a>
@@ -192,18 +192,134 @@ var _hmt = _hmt || [];
 	<!-- 引入正文 -->
 	<div id="content">
 		<h1 id="article-title">
-	<i class="fa fa-folder-open" aria-hidden="true"></i>分类
-</h1>
-<h2 id="article-title">
-	目前共计 0 个分类
-</h2>
 
-<div id="article-content">
-	<ul>
-      
-	</ul>
+	sql注入sqli-labs
+</h1>
+<div class="article-meta">
+	
+		<span>
+			阅读量:<span id="/2021/10/27/sql%E6%B3%A8%E5%85%A5sqli-labs/" class="leancloud_visitors" data-flag-title="sql注入sqli-labs"></span>
+		</span>
+	
+	<span>tony-6</span>
+	<span>2021-10-27 20:33:32</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+    
+
+    
+		<span>Tags：</span>
+            
+    
+		</div>
+
 </div>
 
+<div id="article-content">
+	<p>7777</p>
+<ul>
+<li><p>首先，先安装phpstudy</p>
+<p><img src="https://i.loli.net/2021/10/27/tlNEufgaqhSmc3Z.png" alt="2.PNG"></p>
+</li>
+</ul>
+<p>下载sqli-labs-master装在WWW文件下下面</p>
+<p><img src="https://i.loli.net/2021/10/27/FjJnflAs5OStBdE.png" alt="3.PNG"></p>
+<ul>
+<li><p>但是打开Apache2.4.39时候，提示端口80被占用，发现是SQL Server 2008 里面的组件——SQL Server Reporting Services占用了，在运行框中输入 services.msc将其停止</p>
+</li>
+<li><p>版本改用5.6.9(虽然不知道什么区别)</p>
+</li>
+<li><p>然后打开网站一直是打不开，找了好久发现物理路径没选到sqli-labs</p>
+<p><img src="https://i.loli.net/2021/10/27/6LJyTFtaZXlcr7E.png" alt="4.PNG"></p>
+</li>
+<li><p>mysql用法</p>
+</li>
+</ul>
+<ol>
+<li><p>select schema_name from information_schema.schemata //查库</p>
+</li>
+<li><p>select table_name from information_schema.table where table_schema=’security’//查表</p>
+</li>
+<li><p>select column_name from information_schema.clumns where table_name=’users’//查列</p>
+</li>
+<li><p>select username,password from security.users//查字段</p>
+</li>
+</ol>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/10/26/%E8%AF%AD%E6%B3%95%E6%B3%A8%E9%87%8A/">
+                语法注释
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+    // 显示次数
+		function showTime(Counter) {
+			var query = new AV.Query("Counter");
+			if($(".leancloud_visitors").length > 0){
+				var url = $(".leancloud_visitors").attr('id').trim();
+				// where field
+				query.equalTo("words", url);
+				// count
+				query.count().then(function (number) {
+					// There are number instances of MyClass where words equals url.
+					$(document.getElementById(url)).text(number?  number : '--');
+				}, function (error) {
+					// error is an instance of AVError.
+				});
+			}
+		}
+		// 追加pv
+		function addCount(Counter) {
+			var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'wujun234.github.io';
+			var Counter = AV.Object.extend("Counter");
+			var query = new Counter;
+			query.save({
+				words: url
+			}).then(function (object) {
+			})
+		}
+		$(function () {
+			var Counter = AV.Object.extend("Counter");
+			addCount(Counter);
+			showTime(Counter);
+		});
+	
+</script>
 	</div>
 	<div id="footer">
 	<p>

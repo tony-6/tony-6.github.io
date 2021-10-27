@@ -6,7 +6,7 @@
   <link href="https://tony-6.github.io/atom.xml" rel="self"/>
   
   <link href="https://tony-6.github.io/"/>
-  <updated>2021-10-26T14:37:04.930Z</updated>
+  <updated>2021-10-27T14:01:27.766Z</updated>
   <id>https://tony-6.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sql注入sqli-labs</title>
+    <link href="https://tony-6.github.io/2021/10/27/sql%E6%B3%A8%E5%85%A5sqli-labs/"/>
+    <id>https://tony-6.github.io/2021/10/27/sql%E6%B3%A8%E5%85%A5sqli-labs/</id>
+    <published>2021-10-27T12:33:32.000Z</published>
+    <updated>2021-10-27T14:01:27.766Z</updated>
+    
+    <content type="html"><![CDATA[<p>7777</p><ul><li><p>首先，先安装phpstudy</p><p><img src="https://i.loli.net/2021/10/27/tlNEufgaqhSmc3Z.png" alt="2.PNG"></p></li></ul><p>下载sqli-labs-master装在WWW文件下下面</p><p><img src="https://i.loli.net/2021/10/27/FjJnflAs5OStBdE.png" alt="3.PNG"></p><ul><li><p>但是打开Apache2.4.39时候，提示端口80被占用，发现是SQL Server 2008 里面的组件——SQL Server Reporting Services占用了，在运行框中输入 services.msc将其停止</p></li><li><p>版本改用5.6.9(虽然不知道什么区别)</p></li><li><p>然后打开网站一直是打不开，找了好久发现物理路径没选到sqli-labs</p><p><img src="https://i.loli.net/2021/10/27/6LJyTFtaZXlcr7E.png" alt="4.PNG"></p></li><li><p>mysql用法</p></li></ul><ol><li><p>select schema_name from information_schema.schemata //查库</p></li><li><p>select table_name from information_schema.table where table_schema=’security’//查表</p></li><li><p>select column_name from information_schema.clumns where table_name=’users’//查列</p></li><li><p>select username,password from security.users//查字段</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;7777&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;首先，先安装phpstudy&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/10/27/tlNEufgaqhSmc3Z.png&quot; alt=&quot;2.PNG&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>长段语句注释</title>
