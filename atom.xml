@@ -6,7 +6,7 @@
   <link href="https://tony-6.github.io/atom.xml" rel="self"/>
   
   <link href="https://tony-6.github.io/"/>
-  <updated>2021-10-27T14:03:29.663Z</updated>
+  <updated>2021-10-30T07:00:47.761Z</updated>
   <id>https://tony-6.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>sql注入sqli-labs</title>
+    <title>mysql基本用法(未完)</title>
+    <link href="https://tony-6.github.io/2021/10/30/mysql%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/"/>
+    <id>https://tony-6.github.io/2021/10/30/mysql%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</id>
+    <published>2021-10-30T06:19:31.000Z</published>
+    <updated>2021-10-30T07:00:47.761Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><p>首先要在cmd里面打开mysql命令行</p><p><img src="https://i.loli.net/2021/10/30/acnrXCtzAUHD1jM.png" alt="5.PNG"></p></li><li><p>输入密码</p></li><li><p>输入命令show database 查看库</p></li><li><p>use security使用里面的一个库</p></li><li><p>show tables 显示所有的表</p></li><li><p>select * from  users 就能看到所有用户的id和password</p></li><li><p>mysql用法</p></li></ul><ol><li>select schema_name from information_schema.schemata; //查库</li><li>select table_name from information_schema.table where table_schema=’security’;//查表</li><li>select column_name from information_schema.clumns where table_name=’users’;//查列</li><li>select username,password from security.users;//查字段</li></ol><ul><li><p>在sqli-labs代码中，sql语句后加入以下俩行代码</p><p>echo $sql;</p><p>echo “br”;</p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;首先要在cmd里面打开mysql命令行&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/10/30/acnrXCtzAUHD1jM.png&quot; alt=&quot;5.PNG&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;输入密码&lt;/p&gt;
+&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>sqli-labs环境配置</title>
     <link href="https://tony-6.github.io/2021/10/27/sql%E6%B3%A8%E5%85%A5sqli-labs/"/>
     <id>https://tony-6.github.io/2021/10/27/sql%E6%B3%A8%E5%85%A5sqli-labs/</id>
     <published>2021-10-27T12:33:32.000Z</published>
-    <updated>2021-10-27T14:03:29.663Z</updated>
+    <updated>2021-10-30T06:39:18.887Z</updated>
     
     <content type="html"><![CDATA[<ul><li><p>首先，先安装phpstudy</p><p><img src="https://i.loli.net/2021/10/27/tlNEufgaqhSmc3Z.png" alt="2.PNG"></p></li></ul><p>下载sqli-labs-master装在WWW文件下下面</p><p><img src="https://i.loli.net/2021/10/27/FjJnflAs5OStBdE.png" alt="3.PNG"></p><ul><li><p>但是打开Apache2.4.39时候，提示端口80被占用，发现是SQL Server 2008 里面的组件——SQL Server Reporting Services占用了，在运行框中输入 services.msc将其停止</p></li><li><p>版本改用5.6.9(虽然不知道什么区别)</p></li><li><p>然后打开网站一直是打不开，找了好久发现物理路径没选到sqli-labs</p><p><img src="https://i.loli.net/2021/10/27/6LJyTFtaZXlcr7E.png" alt="4.PNG"></p></li><li><p>mysql用法</p></li></ul><ol><li><p>select schema_name from information_schema.schemata //查库</p></li><li><p>select table_name from information_schema.table where table_schema=’security’//查表</p></li><li><p>select column_name from information_schema.clumns where table_name=’users’//查列</p></li><li><p>select username,password from security.users//查字段</p></li></ol>]]></content>
     

@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		php | 
+		mysql基本用法(未完) | 
 	 
 	Hexo
 	</title>
@@ -150,7 +150,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2021/10/30/mysql%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/">
 										mysql基本用法
 									</a>
@@ -168,7 +168,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file active">
+								<li class="file">
 									<a href="/2021/10/21/php%E5%AD%A6%E4%B9%A0/">
 										php学习
 									</a>
@@ -202,16 +202,16 @@ var _hmt = _hmt || [];
 	<div id="content">
 		<h1 id="article-title">
 
-	php学习
+	mysql基本用法
 </h1>
 <div class="article-meta">
 	
 		<span>
-			阅读量:<span id="/2021/10/21/php%E5%AD%A6%E4%B9%A0/" class="leancloud_visitors" data-flag-title="php"></span>
+			阅读量:<span id="/2021/10/30/mysql%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" class="leancloud_visitors" data-flag-title="mysql基本用法(未完)"></span>
 		</span>
 	
 	<span>tony-6</span>
-	<span>2021-10-21 22:12:15</span>
+	<span>2021-10-30 14:19:31</span>
 		<div id="article-categories">
     
 		<span>Categories：</span>
@@ -227,39 +227,34 @@ var _hmt = _hmt || [];
 </div>
 
 <div id="article-content">
-	<h1 id="php学习"><a href="#php学习" class="headerlink" title="php学习"></a>php学习</h1><ul>
-<li><?php
-// PHP 代码
-?></li>
-<li><p>echo可以输出多个字符串 无返回值，  print输出一个字符串 返回值为1</p>
+	<ul>
+<li><p>首先要在cmd里面打开mysql命令行</p>
+<p><img src="https://i.loli.net/2021/10/30/acnrXCtzAUHD1jM.png" alt="5.PNG"></p>
 </li>
-<li><p>&lt; br&gt;是换行</p>
+<li><p>输入密码</p>
 </li>
-<li><p>申明变量：$ 变量名</p>
+<li><p>输入命令show database 查看库</p>
 </li>
-<li><p>如果要在一个函数中访问一个全局变量，需要使用 global 关键字，在用变量前加个global，或者$GLOBALS[变量] 这样来调用</p>
+<li><p>use security使用里面的一个库</p>
 </li>
-<li><p>EOF用法和echo区别</p>
-<p><img src="https://i.loli.net/2021/10/20/RjiItQeKDCcyFYH.png"></p>
+<li><p>show tables 显示所有的表</p>
+</li>
+<li><p>select * from  users 就能看到所有用户的id和password</p>
+</li>
+<li><p>mysql用法</p>
 </li>
 </ul>
+<ol>
+<li>select schema_name from information_schema.schemata; //查库</li>
+<li>select table_name from information_schema.table where table_schema=’security’;//查表</li>
+<li>select column_name from information_schema.clumns where table_name=’users’;//查列</li>
+<li>select username,password from security.users;//查字段</li>
+</ol>
 <ul>
-<li><p>松散比较：使用两个等号 <strong>==</strong> 比较，只比较值，不比较类型。    !=</p>
-<p>严格比较：用三个等号 <strong>===</strong> 比较，除了比较值，也比较类型。  !==</p>
+<li><p>在sqli-labs代码中，sql语句后加入以下俩行代码</p>
+<p>echo $sql;</p>
+<p>echo “br”;</p>
 </li>
-<li><p>常量：</p>
-<p>define(“GREETING”, “欢迎访问 Runoob.com”); echo GREETING;    // 输出 “欢迎访问 Runoob.com”</p>
-<p>define(“GREETING”, “欢迎访问 Runoob.com”, true); echo greeting;  // 输出 “欢迎访问 Runoob.com”，区分大小写- </p>
-</li>
-<li><p>并置运算符</p>
-<p>用.将俩字符串连起来，类似STL里string的+  </p>
-</li>
-<li><p>strlen() 里面跟字符串，返回字符串长度</p>
-</li>
-<li><p>strpos() 函数用于在字符串内查找一个字符或一段指定的文本。</p>
-<p>找到匹配，该函数会返回第一个匹配的字符位置。如果未找到匹配，则返回 FALSE。</p>
-</li>
-<li></li>
 </ul>
 
 </div>
@@ -268,16 +263,11 @@ var _hmt = _hmt || [];
     <div class="post-guide">
         <div class="item left">
             
-              <a href="/2021/10/25/php(2)/">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  php(2)
-              </a>
-            
         </div>
         <div class="item right">
             
-              <a href="/2021/09/26/html/">
-                html
+              <a href="/2021/10/27/sql%E6%B3%A8%E5%85%A5sqli-labs/">
+                sql注入sqli-labs
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             
