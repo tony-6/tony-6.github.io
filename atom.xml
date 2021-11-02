@@ -6,7 +6,7 @@
   <link href="https://tony-6.github.io/atom.xml" rel="self"/>
   
   <link href="https://tony-6.github.io/"/>
-  <updated>2021-10-30T07:00:47.761Z</updated>
+  <updated>2021-11-02T12:41:18.072Z</updated>
   <id>https://tony-6.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>汇编语言基础</title>
+    <link href="https://tony-6.github.io/2021/11/02/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
+    <id>https://tony-6.github.io/2021/11/02/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/</id>
+    <published>2021-11-02T11:34:51.000Z</published>
+    <updated>2021-11-02T12:41:18.072Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="汇编语言基础"><a href="#汇编语言基础" class="headerlink" title="汇编语言基础"></a>汇编语言基础</h2><ul><li><p>机器码的助记符</p></li><li><p>寄存器</p></li></ul><p>RSP为栈顶指针，RBP为栈底指针，二者用于维护程序运行时的函数栈</p><p>EFLAGS为标志位寄存器，用于存储CPU运行计算过程中的状态</p><p>RIP指针用于存储CPU下一条将会执行的指针，不能直接修改，正常情况下会每一次运行一条指令自增一条指令的长度，当发生跳转时才会以其他形式改变其值</p><ul><li><p>寻址方式<br><img src="https://i.loli.net/2021/11/02/rOM6XUj5Zk9PDaT.png" alt="6.PNG"></p></li><li><p>格式 intel和AT&amp;T</p></li><li><p>汇编指令<br><img src="https://i.loli.net/2021/11/02/yMOg63fLSmeCYNi.png" alt="7.PNG"></p><p>call的话是函数调用，jmp是函数中的ifelse 只涉及跳转，不能作为函数要调用</p><p>pop时rsp+8是因为linux中栈由高地址向低地址</p></li><li><p>计算机在执行汇编代码时，只会顺序执行，要通过call 、jmp、ret这种指令来跳转</p></li><li></li></ul><p>mov rcx rax; //   int c=a;</p><p>mov rax rbx; //  int a=b;</p><p>mov rbx rcx; //   int b=c;</p><ul><li><p>溢出     存储位数不够    溢出到符号位    整数溢出一般配合别的漏洞来使用</p><p>无符号数上溢  0xffffffff+1   0</p><p>无符号数下溢  0-1      0xfffffffff</p><p>有符号数上溢  有符号正数0x7fffffff+1      变成负数0x800000000</p><p>有符号数下溢   有符号数0x80000000-1     变成正数0x7ffffffffff</p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;汇编语言基础&quot;&gt;&lt;a href=&quot;#汇编语言基础&quot; class=&quot;headerlink&quot; title=&quot;汇编语言基础&quot;&gt;&lt;/a&gt;汇编语言基础&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;机器码的助记符&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;寄存器&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>mysql基本用法(未完)</title>
