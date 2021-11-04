@@ -6,7 +6,7 @@
   <link href="https://tony-6.github.io/atom.xml" rel="self"/>
   
   <link href="https://tony-6.github.io/"/>
-  <updated>2021-11-02T12:41:18.072Z</updated>
+  <updated>2021-11-04T08:09:47.891Z</updated>
   <id>https://tony-6.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux基础</title>
+    <link href="https://tony-6.github.io/2021/11/02/linux%E5%9F%BA%E7%A1%80/"/>
+    <id>https://tony-6.github.io/2021/11/02/linux%E5%9F%BA%E7%A1%80/</id>
+    <published>2021-11-02T13:09:29.000Z</published>
+    <updated>2021-11-04T08:09:47.891Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="linux基础"><a href="#linux基础" class="headerlink" title="linux基础"></a>linux基础</h2><ul><li><p>文件和目录等等的权限一般都是三个，即 可读 可写 可执行。</p></li><li><p>虚拟内存和物理内存</p><p>物理内存很直白，就是内存中实际的地址。</p><p>虚拟内存是物理内存经过MMU转换后的地址</p><p>系统会给每个用户进程分配一段虚拟内存空间</p></li><li><p>linux基础命令</p></li></ul><p><img src="https://i.loli.net/2021/11/02/AVqKOHtsGQ3kZlI.png" alt="8.png"></p><ul><li><p>计算机内部有两种数据的存储形式：大端序、小端序</p><ul><li>大端序：数据高位存储在计算机地址的低位，数据低位存储在地址的高位。（符合人类阅读习惯）</li></ul><p><img src="https://i.loli.net/2021/11/02/RbX2LADxYMkcwqv.png" alt="9.png"></p><p>将此数据按照字符串输出，得到的为：\x01\x23\x45\x67\x89\xab\xcd\xef</p><ul><li>小端序：数据高位存储在计算机地址的高位，数据低位存储在地址的低位（从存储逻辑、数学运算规律来看，小端序更正常）</li></ul><p><img src="https://i.loli.net/2021/11/02/pkrXGuSfjiWHPOn.png" alt="10.png"></p><p>将此数据按照字符串输出，得到的为：\xef\xcd\xab\x89\x67\x45\x23\x01</p><ul><li><strong>计算机从地址的低地址向高地址开始输出</strong></li></ul><p>linux数据存储的格式为小端序</p><p>pwntools  可完成自动转换</p></li><li><p>文件描述符</p><p>0标准输入（stdin）、1标准输出（stdout）、2标准错误（stderr）</p><p><strong>read(0,buf,size)</strong> 从stdin中读size个数据到buf中。</p><p><strong>write(1,buf,size)</strong> 从buf中取size个数据到stdout中。</p></li><li><p>栈</p><p>由于<strong>函数调用顺序也是LIFO</strong>，所以大多数系统，都是通过栈来维护函数调用关系。</p><p>linux地址中，高地址为栈底，低地址为栈顶 （栈由高地址向低地址生长）</p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;linux基础&quot;&gt;&lt;a href=&quot;#linux基础&quot; class=&quot;headerlink&quot; title=&quot;linux基础&quot;&gt;&lt;/a&gt;linux基础&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;文件和目录等等的权限一般都是三个，即 可读 可写 可执行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>汇编语言基础</title>

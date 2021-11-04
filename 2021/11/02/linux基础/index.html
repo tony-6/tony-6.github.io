@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		mysql基本用法(未完) | 
+		linux基础 | 
 	 
 	Hexo
 	</title>
@@ -150,7 +150,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2021/11/02/linux%E5%9F%BA%E7%A1%80/">
 										linux基础
 									</a>
@@ -159,7 +159,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file active">
+								<li class="file">
 									<a href="/2021/10/30/mysql%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/">
 										mysql基本用法
 									</a>
@@ -220,16 +220,16 @@ var _hmt = _hmt || [];
 	<div id="content">
 		<h1 id="article-title">
 
-	mysql基本用法
+	linux基础
 </h1>
 <div class="article-meta">
 	
 		<span>
-			阅读量:<span id="/2021/10/30/mysql%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" class="leancloud_visitors" data-flag-title="mysql基本用法(未完)"></span>
+			阅读量:<span id="/2021/11/02/linux%E5%9F%BA%E7%A1%80/" class="leancloud_visitors" data-flag-title="linux基础"></span>
 		</span>
 	
 	<span>tony-6</span>
-	<span>2021-10-30 14:19:31</span>
+	<span>2021-11-02 21:09:29</span>
 		<div id="article-categories">
     
 		<span>Categories：</span>
@@ -245,33 +245,44 @@ var _hmt = _hmt || [];
 </div>
 
 <div id="article-content">
-	<ul>
-<li><p>首先要在cmd里面打开mysql命令行</p>
-<p><img src="https://i.loli.net/2021/10/30/acnrXCtzAUHD1jM.png" alt="5.PNG"></p>
+	<h2 id="linux基础"><a href="#linux基础" class="headerlink" title="linux基础"></a>linux基础</h2><ul>
+<li><p>文件和目录等等的权限一般都是三个，即 可读 可写 可执行。</p>
 </li>
-<li><p>输入密码</p>
+<li><p>虚拟内存和物理内存</p>
+<p>物理内存很直白，就是内存中实际的地址。</p>
+<p>虚拟内存是物理内存经过MMU转换后的地址</p>
+<p>系统会给每个用户进程分配一段虚拟内存空间</p>
 </li>
-<li><p>输入命令show database 查看库</p>
-</li>
-<li><p>use security使用里面的一个库</p>
-</li>
-<li><p>show tables 显示所有的表</p>
-</li>
-<li><p>select * from  users 就能看到所有用户的id和password</p>
-</li>
-<li><p>mysql用法</p>
+<li><p>linux基础命令</p>
 </li>
 </ul>
-<ol>
-<li>select schema_name from information_schema.schemata; //查库</li>
-<li>select table_name from information_schema.table where table_schema=’security’;//查表</li>
-<li>select column_name from information_schema.clumns where table_name=’users’;//查列</li>
-<li>select username,password from security.users;//查字段</li>
-</ol>
+<p><img src="https://i.loli.net/2021/11/02/AVqKOHtsGQ3kZlI.png" alt="8.png"></p>
 <ul>
-<li><p>在sqli-labs代码中，sql语句后加入以下俩行代码</p>
-<p>echo $sql;</p>
-<p>echo “br”;</p>
+<li><p>计算机内部有两种数据的存储形式：大端序、小端序</p>
+<ul>
+<li>大端序：数据高位存储在计算机地址的低位，数据低位存储在地址的高位。（符合人类阅读习惯）</li>
+</ul>
+<p><img src="https://i.loli.net/2021/11/02/RbX2LADxYMkcwqv.png" alt="9.png"></p>
+<p>将此数据按照字符串输出，得到的为：\x01\x23\x45\x67\x89\xab\xcd\xef</p>
+<ul>
+<li>小端序：数据高位存储在计算机地址的高位，数据低位存储在地址的低位（从存储逻辑、数学运算规律来看，小端序更正常）</li>
+</ul>
+<p><img src="https://i.loli.net/2021/11/02/pkrXGuSfjiWHPOn.png" alt="10.png"></p>
+<p>将此数据按照字符串输出，得到的为：\xef\xcd\xab\x89\x67\x45\x23\x01</p>
+<ul>
+<li><strong>计算机从地址的低地址向高地址开始输出</strong></li>
+</ul>
+<p>linux数据存储的格式为小端序</p>
+<p>pwntools  可完成自动转换</p>
+</li>
+<li><p>文件描述符</p>
+<p>0标准输入（stdin）、1标准输出（stdout）、2标准错误（stderr）</p>
+<p><strong>read(0,buf,size)</strong> 从stdin中读size个数据到buf中。</p>
+<p><strong>write(1,buf,size)</strong> 从buf中取size个数据到stdout中。</p>
+</li>
+<li><p>栈</p>
+<p>由于<strong>函数调用顺序也是LIFO</strong>，所以大多数系统，都是通过栈来维护函数调用关系。</p>
+<p>linux地址中，高地址为栈底，低地址为栈顶 （栈由高地址向低地址生长）</p>
 </li>
 </ul>
 
@@ -281,16 +292,11 @@ var _hmt = _hmt || [];
     <div class="post-guide">
         <div class="item left">
             
-              <a href="/2021/11/02/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  汇编语言基础
-              </a>
-            
         </div>
         <div class="item right">
             
-              <a href="/2021/10/27/sql%E6%B3%A8%E5%85%A5sqli-labs/">
-                sql注入sqli-labs
+              <a href="/2021/11/02/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">
+                汇编语言基础
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             
