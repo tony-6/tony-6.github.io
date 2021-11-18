@@ -6,7 +6,7 @@
   <link href="https://tony-6.github.io/atom.xml" rel="self"/>
   
   <link href="https://tony-6.github.io/"/>
-  <updated>2021-11-16T12:39:25.313Z</updated>
+  <updated>2021-11-17T06:54:47.271Z</updated>
   <id>https://tony-6.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>延迟绑定机制</title>
+    <link href="https://tony-6.github.io/2021/11/16/%E5%BB%B6%E8%BF%9F%E7%BB%91%E5%AE%9A%E6%9C%BA%E5%88%B6/"/>
+    <id>https://tony-6.github.io/2021/11/16/%E5%BB%B6%E8%BF%9F%E7%BB%91%E5%AE%9A%E6%9C%BA%E5%88%B6/</id>
+    <published>2021-11-16T13:09:06.000Z</published>
+    <updated>2021-11-17T06:54:47.271Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li></li></ul><ul><li><p>存放系统函数（read，write，open）的库文件就是动态链接库：如libc.so</p></li><li><p>静态编译</p><p>思路就是将所有可能运行到的库函数一同编译到可执行文件中</p></li><li><p>动态编译</p><p>直到遇到需要调用库函数的时候再去动态链接库中寻找</p></li><li><p>GOT（Global Offset Table，全局偏移表）</p><p>GOT 是数据段用于地址无关代码的 Linux ELF 文件中确定全局变量和外部函数地址的表。ELF 中有 .got 和 .plt.got 两个 GOT 表，.got 表用于全局变量的引用地址，.got.plt 用于保存函数引用的地址。</p></li><li><p>PLT（Procedure Linkage Table，程序链接表）</p><p>PLT 是 Linux ELF 文件中用于延迟绑定的表</p><p>程序真正调用的是plt表，plt表是一段汇编指令构成的</p></li><li><p>第一次调用外部函数时，plt表会先跳到对应的got表中，然后进行动态解析，</p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;存放系统函数（read，write，open）的库文件就是动态链接库：如libc.so&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;静态编译&lt;/p&gt;
+&lt;p&gt;思路就是将所有可能运行到的库函数一同编译到可执行文件中&lt;/p&gt;
+&lt;/</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>elf文件格式</title>
