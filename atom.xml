@@ -72,10 +72,10 @@
   
   <entry>
     <title>函数调用与约定</title>
-    <link href="https://tony-6.github.io/2021/11/04/%E8%B0%83%E7%94%A8%E4%B8%8E%E7%BA%A6%E5%AE%9A/"/>
-    <id>https://tony-6.github.io/2021/11/04/%E8%B0%83%E7%94%A8%E4%B8%8E%E7%BA%A6%E5%AE%9A/</id>
-    <published>2021-11-04T08:34:18.000Z</published>
-    <updated>2021-11-10T12:37:21.604Z</updated>
+    <link href="https://tony-6.github.io/2021/11/25/%E8%B0%83%E7%94%A8%E4%B8%8E%E7%BA%A6%E5%AE%9A/"/>
+    <id>https://tony-6.github.io/2021/11/25/%E8%B0%83%E7%94%A8%E4%B8%8E%E7%BA%A6%E5%AE%9A/</id>
+    <published>2021-11-25T08:34:18.000Z</published>
+    <updated>2022-02-23T12:23:26.378Z</updated>
     
     <content type="html"><![CDATA[<ul><li></li><li><p>pop rax   相当于   mov rax [rsp]; add rsp8;</p></li><li><p>push rax  相当于   sub rsp 8; mov [rsp] rax;</p></li><li><p>jmp 1234h，效果就是：mov rip 1234h；rip指针的值是程序下一条运行的指令</p></li><li><p>call 函数调用，需要保存返回地址。</p><p>call 1234h，效果就是：push rip；mov rip 1234h；</p></li><li><p>Ret 用于函数返回，pop rip</p></li><li><p>Rsp永远指向栈顶，Rbp用来定位局部变量</p></li><li><p>leave指令 维护栈帧，通常在函数的结尾 与ret连用</p><p>mov rsp rbp;   pop rbp;</p></li><li><p>调用函数：只需要将rip压栈，即push rip，然后讲rip赋值为被调用函数的起始地址，这一操作被隐性的内置在call指令中。</p><p>被调用函数：push rbp；mov rbp rsp；sub rsp 0xxxx。即保存调用函数的rbp指针，将自己的rbp指针指向栈顶，然后开辟栈空间给自己用，此时rbp就变成了被调用函数的栈底。</p><p>函数返回：leave；ret；翻译过来就是：mov rsp rbp；pop rbp；pop rip；即恢复栈帧，返回调用函数的返回地址。</p></li><li><p>（函数）返回值：一般存在RAX寄存器</p><p>X86-64函数的调用约定为：</p><p>从左至右参数一次传递给rdi，rsi，rdx，rcx，r8，r9。</p><p>如果一个函数的参数多于6个，则从右至左压入栈中传递。</p></li><li><p>syscall指令</p><p>用于调用系统的函数，调用时需指明系统调用号（存在于rax寄存器中，然后布置好参数，执行syscall）</p></li><li><p>系统调用</p></li></ul><p><img src="https://i.loli.net/2021/11/04/G95RmyVB1aCsbOL.png" alt="12.png"></p><ul><li><p>总结：</p><ul><li>调用函数：只需要将rip压栈，即push rip，然后讲rip赋值为被调用函数的起始地址，这一操作被隐性的内置在call指令中</li><li>被调用函数：push rbp；mov rbp rsp；sub rsp 0xxxx。即保存调用函数的rbp指针，将自己的rbp指针指向栈顶，然后开辟栈空间给自己用，此时rbp就变成了被调用函数的栈底。</li><li>函数返回：leave；ret；翻译过来就是：mov rsp rbp；pop rbp；pop rip；即恢复栈帧，返回调用函数的返回地址。</li></ul></li><li><p>调用read(0,buf,size);</p><p>mov rax 0;     read’s syscall number</p><p>mov rdi0;      first arg</p><p>mov rsi buf;   second arg</p><p>nov rdx size;  third arg</p><p>syscall;           execute read(0,buf,size);</p></li></ul>]]></content>
     
