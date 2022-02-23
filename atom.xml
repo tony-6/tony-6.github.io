@@ -6,7 +6,7 @@
   <link href="https://tony-6.github.io/atom.xml" rel="self"/>
   
   <link href="https://tony-6.github.io/"/>
-  <updated>2021-11-17T06:54:47.271Z</updated>
+  <updated>2022-02-23T12:07:30.866Z</updated>
   <id>https://tony-6.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>elf文件格式</title>
+    <link href="https://tony-6.github.io/2021/12/16/elf%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F/"/>
+    <id>https://tony-6.github.io/2021/12/16/elf%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F/</id>
+    <published>2021-12-16T13:38:55.000Z</published>
+    <updated>2022-02-23T12:07:30.866Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li></li><li><p>windows中的exe    相当于   linux中的elf</p></li><li><p>二进制可持性文件的类型是ELF（Executable and Linkable Format）</p></li><li><p>elf的基本信息存在于elf的头部信息中，这些信息包括指令的运行架构、程序入口等等内容，我们可以通过 readelf -h <elf_name>来查看头部信息。</p></li><li><p>可通过 readelf -h <elf_name>来查看elf的头部信息：指令的运行架构、程序入口等</p><p>也可通过010edictor分析</p></li><li><p>elf文件中包含许多个节（section），各个节中存放不同的数据，这些节的信息存放在节头表中，readelf -S &lt; file&gt;查看</p></li></ul><p><img src="https://i.loli.net/2021/11/10/W6MIXmC3ZKRHTfG.png" alt="13.png"></p><ul><li><p>elf文件的节（section）会被映射进内存中的段（segment），可读可写的节被映射入一个段，只读的节被映射入一个段</p></li><li><p>libc</p><ul><li><p>glibc是linux下c标准库的实现 即GNU C Library</p></li><li><p>libc.so本质也是个elf文件</p></li><li><p>linux基本所有程序都以来libc</p></li></ul></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;windows中的exe    相当于   linux中的elf&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;二进制可持性文件的类型是ELF（Executable and Linkable Format）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;elf</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>延迟绑定机制</title>
@@ -37,32 +63,6 @@
 &lt;li&gt;&lt;p&gt;静态编译&lt;/p&gt;
 &lt;p&gt;思路就是将所有可能运行到的库函数一同编译到可执行文件中&lt;/p&gt;
 &lt;/</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>elf文件格式</title>
-    <link href="https://tony-6.github.io/2021/11/16/elf%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F/"/>
-    <id>https://tony-6.github.io/2021/11/16/elf%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F/</id>
-    <published>2021-11-16T12:38:55.000Z</published>
-    <updated>2021-11-16T12:39:25.313Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li></li><li><p>windows中的exe    相当于   linux中的elf</p></li><li><p>二进制可持性文件的类型是ELF（Executable and Linkable Format）</p></li><li><p>elf的基本信息存在于elf的头部信息中，这些信息包括指令的运行架构、程序入口等等内容，我们可以通过 readelf -h <elf_name>来查看头部信息。</p></li><li><p>可通过 readelf -h <elf_name>来查看elf的头部信息：指令的运行架构、程序入口等</p><p>也可通过010edictor分析</p></li><li><p>elf文件中包含许多个节（section），各个节中存放不同的数据，这些节的信息存放在节头表中，readelf -S &lt; file&gt;查看</p></li></ul><p><img src="https://i.loli.net/2021/11/10/W6MIXmC3ZKRHTfG.png" alt="13.png"></p><ul><li><p>elf文件的节（section）会被映射进内存中的段（segment），可读可写的节被映射入一个段，只读的节被映射入一个段</p></li><li><p>libc</p><ul><li><p>glibc是linux下c标准库的实现 即GNU C Library</p></li><li><p>libc.so本质也是个elf文件</p></li><li><p>linux基本所有程序都以来libc</p></li></ul></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;windows中的exe    相当于   linux中的elf&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;二进制可持性文件的类型是ELF（Executable and Linkable Format）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;elf</summary>
       
     
     
